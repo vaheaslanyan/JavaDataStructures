@@ -1,9 +1,6 @@
 package com.urartusoftware;
 
-import java.util.Arrays;
-import com.urartusoftware.algorithms.*;
 import com.urartusoftware.structures.*;
-import com.urartusoftware.structures.DoublyLinkedListStructure;
 
 public class Launcher {
 
@@ -16,7 +13,7 @@ public class Launcher {
         Employee gago = new Employee("Gago", "Drago", 2);
         Employee prosht = new Employee("Proshian", "Halkanian", 452);
 
-        ArrayQueueStructure aq = new ArrayQueueStructure(10);
+        CircularQueueStructure aq = new CircularQueueStructure(10);
         aq.add(joseph);
         aq.add(savo);
         aq.add(lamish);
