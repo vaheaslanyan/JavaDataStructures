@@ -7,38 +7,29 @@ import com.urartusoftware.structures.DoublyLinkedListStructure;
 
 public class Launcher {
 
-    static BubbleSort bs = new BubbleSort();
-    static SelectionSort ss = new SelectionSort();
-
     public static void main(String[] args) {
         int[] intArr = { 20, 35, -15, 7, 55, 1, -22};
 
-        isPalindrome("1001");
+        Employee joseph = new Employee("Hoseph", "Kevorkian", 1);
+        Employee savo = new Employee("Saverkis", "Hambardumian", 314);
+        Employee lamish = new Employee("Lamo", "Samo", 412);
+        Employee gago = new Employee("Gago", "Drago", 2);
+        Employee prosht = new Employee("Proshian", "Halkanian", 452);
 
+        ArrayQueueStructure aq = new ArrayQueueStructure(10);
+        aq.add(joseph);
+        aq.add(savo);
+        aq.add(lamish);
+        aq.add(gago);
+        aq.add(prosht);
 
-    }
+//        aq.printQueue();
 
-    public static void isPalindrome(String str) {
-        String cleanedStr = str.replaceAll("[^A-Za-z]", "").toLowerCase();
-        LinkedStackStructure halfStack = new LinkedStackStructure();
+        aq.remove();
+        aq.remove();
 
-        int i = 0;
+        aq.printQueue();
 
-        for (char c : cleanedStr.toCharArray()) {
-            if (cleanedStr.length() % 2 != 0 && i == cleanedStr.length() / 2) {
-                i++;
-                continue;
-            }
-            if (i < cleanedStr.length() / 2) {
-                halfStack.push(c);
-            } else if (halfStack.isEmpty() || halfStack.pop() != c) {
-                System.out.println("String is NOT palindrome!");
-                return;
-            }
-            i++;
-        }
-
-        System.out.println("String IS palindrome!");
-
+        System.out.println(aq.peek());
     }
 }
