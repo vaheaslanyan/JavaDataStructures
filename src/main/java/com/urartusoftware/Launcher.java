@@ -13,20 +13,14 @@ public class Launcher {
         Employee gago = new Employee("Gago", "Drago", 2);
         Employee prosht = new Employee("Proshian", "Halkanian", 452);
 
-        CircularQueueStructure aq = new CircularQueueStructure(10);
-        aq.add(joseph);
-        aq.add(savo);
-        aq.add(lamish);
-        aq.add(gago);
-        aq.add(prosht);
+        ChainedHashtableStructure ht = new ChainedHashtableStructure();
+        ht.put("Hoseph", joseph);
+        ht.put("Saverkis", savo);
+        ht.put("Lamo", lamish);
+        ht.put("Gago", gago);
 
-//        aq.printQueue();
+//        ht.printHashtable();
 
-        aq.remove();
-        aq.remove();
-
-        aq.printQueue();
-
-        System.out.println(aq.peek());
+        ht.printHashtable();
     }
 }
